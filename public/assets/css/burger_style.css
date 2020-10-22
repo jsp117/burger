@@ -1,0 +1,9 @@
+body {
+    background-image: url("../images/burger.jpg");
+    /* background image from unsplash - by Ilya Mashkov */
+    background-size: cover;
+}
+
+.container-flex{
+    opacity: 0.95;
+}

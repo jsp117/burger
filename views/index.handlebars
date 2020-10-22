@@ -1,27 +1,29 @@
 <div class="row">
-    <form>
-        <ol>
+    <form class="col-lg-4 bg-secondary p-3">
+        <ol style="margin-left: -40px;" class="mt-3 ">
             {{#each burgers}}
             {{#unless devoured}}
-            <li>
+            <li class="list-group-item">
                 <p>
                     {{this.burger_name}}
-                    <button data-burgerid="{{this.id}}" class="eatBurger" type="submit">Eat Burger</button>
+                    <button class="btn btn-dark ml-3 eatBurger" data-burgerid="{{this.id}}" type="submit">Eat
+                        Burger</button>
                 </p>
             </li>
             {{/unless}}
             {{/each}}
         </ol>
     </form>
-
-    <form>
-        <ol>
+    <div class="col-lg-4"></div>
+    <form class="col-lg-4 bg-secondary p-3">
+        <ol style="margin-left: -40px;" class="mt-3">
             {{#each burgers}}
             {{#if devoured}}
-            <li>
+            <li class="list-group-item">
                 <p>
                     {{this.burger_name}}
-                    <button data-eatenid="{{this.id}}" class="trashBurger" type="submit">Trash</button>
+                    <button class="btn btn-dark ml-3 trashBurger" data-eatenid="{{this.id}}"
+                        type="submit">Trash</button>
                 </p>
             </li>
             {{/if}}
@@ -29,8 +31,14 @@
         </ol>
     </form>
 </div>
+<div class="p-5"></div>
 
-<form id="addBurger">
-    <textarea type="text" name="newBurger" id="add-burger" placeholder="Insert Burger Here!"></textarea>
-    <button type="submit">Add Burger</button>
-</form>
+<div class="row">
+    <div class = "col-lg-4"></div>
+    <div class="col-lg-4 bg-secondary p-3">
+        <form id="addBurger" class="">
+            <textarea class = "form-control" type="text" name="newBurger" id="add-burger" placeholder="Can I take your order?"></textarea>
+            <button class="btn btn-dark" type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>
