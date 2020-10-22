@@ -18,8 +18,7 @@ const orm = {
     },
 
     insertOne: function (tableInput, col, value, cb) {
-        var queryString = `INSERT INTO ${tableInput} SET ${col} = ${value}`;
-
+        var queryString = "INSERT INTO ?? SET ?? = ?";
         connection.query(queryString, [tableInput, col, value], function (err, result) {
             if (err) throw err;
             console.log(result);
@@ -33,8 +32,15 @@ const orm = {
             console.log(result);
             cb(result);
         });
+    },
+    deleteOne: function (tableInput, col, value, cb) {
+        var queryString = `DELETE FROM ?? WHERE ?? = ?`;
+        connection.query(queryString, [tableInput, col, value], function (err, result) {
+            if (err) throw err;
+            // console.log(result);
+            cb(result);
+        });
     }
 };
-
 
 module.exports = orm;

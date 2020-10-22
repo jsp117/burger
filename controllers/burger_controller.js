@@ -12,9 +12,17 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/api/eat/:id", function (req, res) {
+router.put("/api/eat/:id", function (req, res) {
     var id = req.params.id;
     burger.updateOne(id, function (data) {
+        console.log(data);
+    });
+    res.render("index");
+});
+
+router.delete("/api/trash/:id", function (req, res) {
+    var id = req.params.id;
+    burger.deleteOne(id, function (data) {
         console.log(data);
     });
     res.render("index");

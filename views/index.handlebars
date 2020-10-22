@@ -18,7 +18,7 @@
     <li>
         <p>
             {{this.id}}. {{this.burger_name}} {{this.devoured}}
-            <button data-eatenid="{{this.id}}" class="Trash Burger" type="submit">Trash</button>
+            <button data-eatenid="{{this.id}}" class="trashBurger" type="submit">Trash</button>
         </p>
     </li>
     {{/if}}
@@ -33,15 +33,30 @@
 
     $(".eatBurger").on("click", function (event) {
         event.preventDefault();
-        console.log("WORKING");
         var id = $(this).data("burgerid");
 
 
         $.ajax("/api/eat/" + id, {
-            type: "POST"
+            type: "PUT"
         }).then(
             function () {
                 console.log("Moved ", id);
+                location.reload();
+            }
+        );
+    });
+
+    $(".trashBurger").on("click", function (event) {
+        event.preventDefault();
+        console.log("WORKING");
+        var id = $(this).data("eatenid");
+
+
+        $.ajax("/api/trash/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("Deleted ", id);
                 location.reload();
             }
         );
