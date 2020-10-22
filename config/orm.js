@@ -21,25 +21,25 @@ const orm = {
         var queryString = "INSERT INTO " + tableInput;
 
         queryString += " (";
-        queryString += cols.toString();
+        queryString += col.toString();
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
-        connection.query(queryString), [tableInput, col], function (err, result) {
+        connection.query(queryString, [tableInput, col], function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);
-        }
+        });
     },
     updateOne: function (tableInput, col1, trueFalse, col2, value, cb) {
         var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
-        connection.query(queryString), [tableInput, col1, trueFalse, col2, value], function (err, result) {
+        connection.query(queryString, [tableInput, col1, trueFalse, col2, value], function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);
-        }
+        });
     }
 };
 

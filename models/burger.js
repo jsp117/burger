@@ -15,8 +15,8 @@ var burger = {
             cb(res);
         });
     },
-    updateOne: function(devoured, trueFalse, burger, burgerName, cb){
-        orm.updateOne("burgers", devoured, trueFalse, burger, burgerName, function(res){
+    updateOne: function(id, cb){
+        orm.updateOne("burgers", "devoured", 1, "id", id, function(res){
             cb(res);
         });
     }

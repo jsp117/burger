@@ -12,6 +12,15 @@ router.get("/", function (req, res) {
     });
 });
 
+router.post("/api/eat/:id", function (req, res) {
+    var id = req.params.id;
+    burger.updateOne(id, function (err, response) {
+        if (err) throw err;
+        console.log(response);
+    });
+    res.render("index");
+});
+
 
 
 

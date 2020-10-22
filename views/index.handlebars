@@ -1,9 +1,43 @@
+
 <ul>
     {{#each burgers}}
+    {{#unless devoured}}
     <li>
         <p>
             {{this.id}}. {{this.burger_name}} {{this.devoured}}
+            <button data-burgerid="{{this.id}}" class="eatBurger" type="submit">Eat Burger</button>
         </p>
     </li>
+    {{/unless}}
     {{/each}}
 </ul>
+
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+        <p>
+            {{this.id}}. {{this.burger_name}} {{this.devoured}}
+            <button data-eatenid="{{this.id}}" class="Trash Burger" type="submit">Trash</button>
+        </p>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<script>$(".eatBurger").on("click", function(event) {
+    event.preventDefault();
+    console.log("WORKING");
+    var id = $(this).data("burgerid");
+
+
+    $.ajax("/api/eat/" + id, {
+      type: "POST"
+    }).then(
+      function() {
+        console.log("Moved ", id);
+        location.reload();
+      }
+    );
+  });</script>
