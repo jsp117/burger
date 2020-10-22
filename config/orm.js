@@ -1,4 +1,4 @@
-const connection = require("./connection.js")
+const connection = require("../config/connection.js")
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -9,13 +9,12 @@ function printQuestionMarks(num) {
 }
 
 const orm = {
-    selectAll: function (tableInput, cb) {
-        var queryString = "SELECT * FROM ??";
-        connection.query(queryString), [tableInput], function (err, result) {
+    selectAll: function (cb) {
+        connection.query("SELECT * FROM burgers", function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);
-        }
+        });
     },
 
     insertOne: function (tableInput, col, cb) {
