@@ -1,31 +1,36 @@
-<ol>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        <p>
-            {{this.burger_name}}
-            <button data-burgerid="{{this.id}}" class="eatBurger" type="submit">Eat Burger</button>
-        </p>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ol>
+<div class="row">
+    <form>
+        <ol>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                <p>
+                    {{this.burger_name}}
+                    <button data-burgerid="{{this.id}}" class="eatBurger" type="submit">Eat Burger</button>
+                </p>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
+    </form>
 
-
-<ol>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        <p>
-            {{this.burger_name}}
-            <button data-eatenid="{{this.id}}" class="trashBurger" type="submit">Trash</button>
-        </p>
-    </li>
-    {{/if}}
-    {{/each}}
-</ol>
+    <form>
+        <ol>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                <p>
+                    {{this.burger_name}}
+                    <button data-eatenid="{{this.id}}" class="trashBurger" type="submit">Trash</button>
+                </p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ol>
+    </form>
+</div>
 
 <form id="addBurger">
     <textarea type="text" name="newBurger" id="add-burger" placeholder="Insert Burger Here!"></textarea>
-    <button type="submit">Add Burger</button></form>
-
+    <button type="submit">Add Burger</button>
+</form>

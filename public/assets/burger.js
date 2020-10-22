@@ -8,7 +8,7 @@ $(function () {
       type: "PUT"
     }).then(
       function () {
-        console.log("Moved ", id);
+        // console.log("Moved ", id);
         location.reload();
       }
     );
@@ -16,7 +16,7 @@ $(function () {
 
   $(".trashBurger").on("click", function (event) {
     event.preventDefault();
-    console.log("WORKING");
+    // console.log("WORKING");
     var id = $(this).data("eatenid");
 
 
@@ -24,7 +24,7 @@ $(function () {
       type: "DELETE"
     }).then(
       function () {
-        console.log("Deleted ", id);
+        // console.log("Deleted ", id);
         location.reload();
       }
     );
@@ -42,7 +42,7 @@ $(function () {
       data: burger
     }).then(
       function () {
-        console.log("Added burger ", burger.name);
+        // console.log("Added burger ", burger.name);
         location.reload();
       }
     );
