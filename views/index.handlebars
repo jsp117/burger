@@ -54,14 +54,12 @@
             name: $("#add-burger").val()
         };
 
-        // Send the PUT request.
         $.ajax("/api/add/", {
             type: "POST",
             data: burger
         }).then(
             function () {
                 console.log("Added burger ", burger.name);
-                // Reload the page to get the updated list
                 location.reload();
             }
         );
