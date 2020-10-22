@@ -9,8 +9,8 @@ function printQuestionMarks(num) {
 }
 
 const orm = {
-    selectAll: function (cb) {
-        connection.query("SELECT * FROM burgers", function (err, result) {
+    selectAll: function (tableInput, cb) {
+        connection.query("SELECT * FROM " + tableInput, function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);

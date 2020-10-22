@@ -5,18 +5,18 @@ var orm = require("../config/orm.js");
 
 var burger = {
     selectAll: function(cb) {
-        orm.selectAll(function(res){
+        orm.selectAll("burgers", function(res){
             console.log(res);
             cb(res);
         });
     }, 
     insertOne: function(burger, cb){
-        orm.insertOne("burgers", col, function(res){
+        orm.insertOne("burgers", burger, function(res){
             cb(res);
         });
     },
-    updateOne: function(devoured, trueFalse, burger, burgername, cb){
-        orm.updateOne("burgers", col1, trueFalse, col2, value, function(res){
+    updateOne: function(devoured, trueFalse, burger, burgerName, cb){
+        orm.updateOne("burgers", devoured, trueFalse, burger, burgerName, function(res){
             cb(res);
         });
     }
