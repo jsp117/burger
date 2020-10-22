@@ -1,40 +1,42 @@
+<div class="p-4"></div>
 <div class="row">
-    <div class="card col-lg-4 bg-secondary p-3">
-        <div class="card-body">
-            <h5 class="card-title">My Burgers</h5>
-            <ol style="margin-left: -40px;" class="mt-3 overflow-auto">
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li class="list-group-item">
-                    <p class="card-text">
-                        {{this.burger_name}}
-                        <button class="btn btn-dark ml-3 eatBurger" data-burgerid="{{this.id}}" type="submit">
-                            Eat Burger</button>
-                    </p>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ol>
-        </div>
+    <div class="col-lg-1"></div>
+    <div class="card col-lg-4 text-center overflow-auto" style="height: 280px;">
+        <h5 class="card-header bg-light">My Burgers</h5>
+        <ul style="margin-left: -40px;" class=" list-group-flush">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li class="list-group-item">
+                <p class="card-text">
+                    {{this.burger_name}}
+                </p>
+                <button class="btn btn-dark eatBurger" data-burgerid="{{this.id}}" type="submit">
+                    Eat Burger</button>
+
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+
     </div>
-    <div class="col-lg-4"></div>
-    <div class="card col-lg-4 bg-secondary p-3">
-        <div class="card-body">
-            <h5 class="card-title">Eaten Burgers</h5>
-            <ol style="margin-left: -40px;" class="mt-3">
-                {{#each burgers}}
-                {{#if devoured}}
-                <li class="list-group-item">
-                    <p class="card-text">
-                        {{this.burger_name}}
-                        <button class="btn btn-dark ml-3 trashBurger" data-eatenid="{{this.id}}"
-                            type="submit">Trash</button>
-                    </p>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ol>
-        </div>
+    <div class="col-lg-2"></div>
+    <div class="card col-lg-4 text-center overflow-auto" style="height: 280px;">
+
+        <h5 class="card-header bg-light">Eaten Burgers</h5>
+        <ul style="margin-left: -40px;" class=" list-group-flush">
+            {{#each burgers}}
+            {{#if devoured}}
+            <li class="list-group-item">
+                <p class="card-text">
+                    {{this.burger_name}}
+                </p>
+                <button class="btn btn-dark trashBurger" data-eatenid="{{this.id}}" type="submit">Trash</button>
+
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+
     </div>
 
     {{!-- row end --}}
@@ -44,11 +46,12 @@
 
 <div class="row">
     <div class="col-lg-4"></div>
-    <div class="col-lg-4 bg-secondary p-3">
-        <form id="addBurger" class="">
+    <div class="col-lg-4 card mb-5 text-center">
+        <h5 class="card-header bg-light">Place your order</h5>
+        <form id="addBurger">
             <textarea class="form-control" type="text" name="newBurger" id="add-burger"
                 placeholder="Can I take your order?"></textarea>
-            <button class="btn btn-dark" type="submit">Add Burger</button>
+            <button class="btn btn-dark mt-2 mb-2" type="submit">Add Burger</button>
         </form>
     </div>
 </div>
