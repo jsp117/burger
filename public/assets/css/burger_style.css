@@ -4,6 +4,11 @@ body {
     background-size: cover;
 }
 
-.container{
-    opacity: 0.92;
+.navbar{
+    border-radius: 25px;
+}
+
+.main{
+    border-radius: 50px;
+    opacity: 0.95;
 }
