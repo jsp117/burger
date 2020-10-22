@@ -20,7 +20,12 @@ router.post("/api/eat/:id", function (req, res) {
     res.render("index");
 });
 
-
-
+router.post("/api/add/", function (req, res) {
+    var name = req.body.name;
+    burger.insertOne(name, function (data) {
+        console.log(data);
+    });
+    res.render("index");
+});
 
 module.exports = router;

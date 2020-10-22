@@ -1,4 +1,3 @@
-
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
@@ -26,18 +25,47 @@
     {{/each}}
 </ul>
 
-<script>$(".eatBurger").on("click", function(event) {
-    event.preventDefault();
-    console.log("WORKING");
-    var id = $(this).data("burgerid");
+<form id="addBurger">
+    <textarea type="text" name="newBurger" id="add-burger" placeholder="Insert Burger Here!"></textarea>
+    <button type="submit">Add Burger</button></form>
+
+<script>
+
+    $(".eatBurger").on("click", function (event) {
+        event.preventDefault();
+        console.log("WORKING");
+        var id = $(this).data("burgerid");
 
 
-    $.ajax("/api/eat/" + id, {
-      type: "POST"
-    }).then(
-      function() {
-        console.log("Moved ", id);
-        location.reload();
-      }
-    );
-  });</script>
+        $.ajax("/api/eat/" + id, {
+            type: "POST"
+        }).then(
+            function () {
+                console.log("Moved ", id);
+                location.reload();
+            }
+        );
+    });
+
+    $("#addBurger").on("submit", function (event) {
+        event.preventDefault();
+
+        var burger = {
+            name: $("#add-burger").val()
+        };
+
+        // Send the PUT request.
+        $.ajax("/api/add/", {
+            type: "POST",
+            data: burger
+        }).then(
+            function () {
+                console.log("Added burger ", burger.name);
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
+
+
+</script>

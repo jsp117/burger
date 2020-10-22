@@ -17,25 +17,18 @@ const orm = {
         });
     },
 
-    insertOne: function (tableInput, col, cb) {
-        var queryString = "INSERT INTO " + tableInput;
+    insertOne: function (tableInput, col, value, cb) {
+        var queryString = `INSERT INTO ${tableInput} SET ${col} = ${value}`;
 
-        queryString += " (";
-        queryString += col.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
-
-        connection.query(queryString, [tableInput, col], function (err, result) {
+        connection.query(queryString, [tableInput, col, value], function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);
         });
     },
-    updateOne: function (tableInput, col1, trueFalse, col2, value, cb) {
+    updateOne: function (tableInput, col1, value1, col2, value2, cb) {
         var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
-        connection.query(queryString, [tableInput, col1, trueFalse, col2, value], function (err, result) {
+        connection.query(queryString, [tableInput, col1, value1, col2, value2], function (err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);

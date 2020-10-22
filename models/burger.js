@@ -11,7 +11,7 @@ var burger = {
         });
     }, 
     insertOne: function(burger, cb){
-        orm.insertOne("burgers", burger, function(res){
+        orm.insertOne("burgers", "burger_name", `'${burger}'`, function(res){
             cb(res);
         });
     },
