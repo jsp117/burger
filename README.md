@@ -26,7 +26,7 @@
 * [Github](https://github.com/)
 
 ## Deployed_Link
-[Weather Dashboard](https://jsp117.github.io/Weather-Dashboard/)
+[Deployed](https://jsp117.github.io/Weather-Dashboard/)
 
 ## Author
 Jonathan SanPedro - Bachelors of Information Technology at Rutgers New Brunswick - Student at Berkeley Coding Bootcamp
@@ -64,6 +64,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Acknowledgments
-[Openweathermap.org](https://openweathermap.org/)
+
 
