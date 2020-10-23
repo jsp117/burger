@@ -1,0 +1,14 @@
+body {
+    background-image: url("../images/burger.jpg");
+    /* background image from unsplash - by Ilya Mashkov */
+    background-size: cover;
+}
+
+.navbar{
+    border-radius: 25px;
+}
+
+.main{
+    border-radius: 50px;
+    opacity: 0.95;
+}
