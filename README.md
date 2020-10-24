@@ -3,7 +3,7 @@
 ## Description
 For this project, the goal was to create an application that allows a user to input a burger name, click a button that moves that burger to the "eaten" section, then click a button to throw it in the trash. All burgers had to be stored in a MySQL database and their name and "devoured" status saved in the table. The add burger button inserts user input into the mySQL database along with a unique id and a default devoured status of false. When the user clicks one of the eat burger buttons, the status of that burger is changed to devoured. When the trash button is clicked, the burger is deleted from the database. 
 
-In order to accomplish this, I created an ORM to set up a template for my SQL statements. Utilizing the ORM, I set up a model to fill the ORM with user input, pulled from the front end Javascript through AJAX queries. I then uploaded the project to Heroku, using JawsDB to set up the SQL database.
+In order to accomplish this, I created an ORM to set up a template for my SQL statements. Utilizing the ORM, I set up a model to fill the ORM with user input, pulled from the front end Javascript through AJAX queries. I then display that information on index utilizing handlebars syntax. After completing the backend, I used Bootstrap to design the page, setting up cards for each section and holding everything in a container. I then uploaded the project to Heroku, using JawsDB to set up the SQL database.
 
 ## Table of Contents
 * [Usage](#usage)
