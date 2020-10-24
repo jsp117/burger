@@ -49,6 +49,7 @@ $(function () {
     }
     else{
       alert("No numbers or special characters please!");
+      $("#add-burger").val(" ");
     }
   });
 });
