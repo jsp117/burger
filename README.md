@@ -1,10 +1,11 @@
 # Burger
 
 ## Description
+For this project, the goal was to create an application that allows a user to input a burger name, click a button that moves that burger to the "eaten" section, then click a button to throw it in the trash. All burgers had to be stored in a MySQL database and their name and "devoured" status saved in the table. The add burger button inserts user input into the mySQL database along with a unique id and a default devoured status of false. When the user clicks one of the eat burger buttons, the status of that burger is changed to devoured. When the trash button is clicked, the burger is deleted from the database. 
 
 ## Table of Contents
-* [Installation](#installation)
 * [Usage](#usage)
+* [Code Snippets](#code_snippets)
 * [Built With](#built_with)
 * [Deployed Link](#deployed_link)
 * [Author](#author)
@@ -12,21 +13,32 @@
 * [License](#license)
 * [Acknowledgments](#Acknowledgments)
 
-## Installation
-
-
 ## Usage
+Type in the name of a burger and click "add burger". Click "eat burger" to move that burger over to the eaten burgers area. Click "trash" to throw away an eaten burger.
+
+## Code Snippets
+
+This code snippet displays the model burger.js, which builds out the SQL generated in the ORM with columns and values specific to the database being used. It is ued to generate SQL statements based on user input.
+
+![model](/public/assets/images/model.png)
+
+This code snippet displays controller.js, which calls the model with the user input taken from the front end JavaScript.
+
+![controller](/public/assets/images/controller.png)
 
 ## Built_With
 * JavaScript
-* [Openweathermap](https://openweathermap.org/)
 * HTML
-* [Bootstrap](https://getbootstrap.com/)
 * CSS
+* [mySQL](https://www.mysql.com/)
+* [Express](https://expressjs.com/)
+* [Handlebars](https://handlebarsjs.com/)
+* [Heroku](https://heroku.com/)
+* [Bootstrap](https://getbootstrap.com/)
 * [Github](https://github.com/)
 
 ## Deployed_Link
-[Deployed](https://jsp117.github.io/Weather-Dashboard/)
+[Burgers](https://jons-burger-joint.herokuapp.com/)
 
 ## Author
 Jonathan SanPedro - Bachelors of Information Technology at Rutgers New Brunswick - Student at Berkeley Coding Bootcamp
@@ -35,9 +47,7 @@ Jonathan SanPedro - Bachelors of Information Technology at Rutgers New Brunswick
 * [LinkedIn](https://www.linkedin.com/in/jonathan-s-6ab32283/)
 
 ## Images
-![Weather Dashboard](./assets/weather.png)
-
-
+![Burgers!](/public/assets/images/burger.png)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -64,5 +74,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Acknowledgments
+Icon made by Freepik from [Flaticon](https://www.flaticon.com)
 
+Background image by Ilya Mashkov from [Unsplash](https://www.unsplash.com) 
 
