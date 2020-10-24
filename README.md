@@ -53,7 +53,7 @@ Jonathan SanPedro - Bachelors of Information Technology at Rutgers New Brunswick
 ![Burgers!](/public/assets/images/burger.png)
 
 ## License
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 MIT License
 
