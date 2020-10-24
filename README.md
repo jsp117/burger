@@ -20,7 +20,7 @@ Type in the name of a burger and click "add burger". Click "eat burger" to move 
 
 ## Code Snippets
 
-This code snippet displays the model burger.js, which builds out the SQL generated in the ORM with columns and values specific to the database being used. It is ued to generate SQL statements based on user input.
+This code snippet displays the model burger.js, which builds out the SQL generated in the ORM with columns and values specific to the database being used. It is used to generate SQL statements based on user input.
 
 ![model](/public/assets/images/model.png)
 
@@ -53,7 +53,7 @@ Jonathan SanPedro - Bachelors of Information Technology at Rutgers New Brunswick
 ![Burgers!](/public/assets/images/burger.png)
 
 ## License
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)
 
 MIT License
 
