@@ -3,6 +3,8 @@
 ## Description
 For this project, the goal was to create an application that allows a user to input a burger name, click a button that moves that burger to the "eaten" section, then click a button to throw it in the trash. All burgers had to be stored in a MySQL database and their name and "devoured" status saved in the table. The add burger button inserts user input into the mySQL database along with a unique id and a default devoured status of false. When the user clicks one of the eat burger buttons, the status of that burger is changed to devoured. When the trash button is clicked, the burger is deleted from the database. 
 
+In order to accomplish this, I created an ORM to set up a template for my SQL statements. Utilizing the ORM, I set up a model to fill the ORM with user input, pulled from the front end Javascript through AJAX queries. I then uploaded the project to Heroku, using JawsDB to set up the SQL database.
+
 ## Table of Contents
 * [Usage](#usage)
 * [Code Snippets](#code_snippets)
@@ -15,6 +17,8 @@ For this project, the goal was to create an application that allows a user to in
 
 ## Usage
 Type in the name of a burger and click "add burger". Click "eat burger" to move that burger over to the eaten burgers area. Click "trash" to throw away an eaten burger.
+
+![gif of usage](/public/assets/images/burgerGif.gif)
 
 ## Code Snippets
 
@@ -33,6 +37,7 @@ This code snippet displays controller.js, which calls the model with the user in
 * [mySQL](https://www.mysql.com/)
 * [Express](https://expressjs.com/)
 * [Handlebars](https://handlebarsjs.com/)
+* [JawsDB](https://www.jawsdb.com/)
 * [Heroku](https://heroku.com/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Github](https://github.com/)

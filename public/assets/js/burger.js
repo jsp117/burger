@@ -32,7 +32,7 @@ $(function () {
   $("#addBurger").on("submit", function (event) {
     event.preventDefault();
     var burger = {
-      name: $("#add-burger").val()
+      name: $("#add-burger").val().trim()
     };
     // add ajax call
     $.ajax("/api/add/", {
