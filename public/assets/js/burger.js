@@ -34,15 +34,21 @@ $(function () {
     var burger = {
       name: $("#add-burger").val().trim()
     };
-    // add ajax call
-    $.ajax("/api/add/", {
-      type: "POST",
-      data: burger
-    }).then(
-      function () {
-        // console.log("Added burger ", burger.name);
-        location.reload();
-      }
-    );
+
+    if (/^[A-Za-z ]+$/.test(burger.name)) {
+      // add ajax call
+      $.ajax("/api/add/", {
+        type: "POST",
+        data: burger
+      }).then(
+        function () {
+          // console.log("Added burger ", burger.name);
+          location.reload();
+        }
+      );
+    }
+    else{
+      alert("No numbers or special characters please!");
+    }
   });
 });
